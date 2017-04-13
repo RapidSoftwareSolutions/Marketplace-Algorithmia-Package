@@ -1,0 +1,336 @@
+{
+  "package": "Algorithmia",
+  "tagline": "Algorithmia API",
+  "description": "Connect to the Algorithmia API to host language-agnostic functions and algorithms via an API. Test an API call and export the code snippet into your app.",
+  "image": "https://logo.clearbit.com/algorithmia.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Algorithmia-Package",
+  "keywords": [
+    "API",
+    "algorithm",
+    "function",
+    "learning",
+    "machine",
+    "MachineLearning"
+  ],
+  "accounts": {
+    "domain": "algorithmia.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "callAlgorithm",
+      "description": "Returns all LIVE Events",
+      "args": [{
+        "name": "apiKey",
+        "type": "credentials",
+        "info": "The api key obtained from Algorithmia",
+        "required": true
+      },
+        {
+          "name": "owner",
+          "type": "String",
+          "info": "Algorithm owner",
+          "required": true
+        },
+        {
+          "name": "algoname",
+          "type": "String",
+          "info": "Algorithm name",
+          "required": true
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "info": "JSON objects",
+          "required": true
+        }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "checkExistence",
+      "description": "Check if directory or file exists without downloading it",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "File or directory",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "listDirectoryContents",
+      "description": "List the contents of a directory",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "Directory (relative to the root of a given data source)",
+          "required": true
+        },
+        {
+          "name": "acl",
+          "type": "Boolean",
+          "info": "Include the directory ACL in the response. (Default = false) ",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createDirectory",
+      "description": "Create a directory through the Algorithmia Data API",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "Directory (relative to the root of a given data source)",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Name of the directory to create",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateDirectory",
+      "description": "Update a directory",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "Directory (relative to the root of a given data source)",
+          "required": true
+        },
+        {
+          "name": "acl",
+          "type": "JSON",
+          "info": "JSON object specifying permissions of the directory",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteDirectory",
+      "description": "Delete a directory",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "Directory (relative to the root of a given data source)",
+          "required": true
+        },
+        {
+          "name": "force",
+          "type": "Boolean",
+          "info": "If true, enables recursive delete of a non-empty directory",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getFile",
+      "description": "Get a file through the Algorithmia Data API",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "File path (relative to the root of a given data source)",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "uploadFile",
+      "description": "Upload a file through the Algorithmia Data API",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "Directory (relative to the root of a given data source)",
+          "required": true
+        },
+        {
+          "name": "file",
+          "type": "File",
+          "info": "Uploaded file",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteFile",
+      "description": "Delete a file through the Algorithmia Data API",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Algorithmia",
+          "required": true
+        },
+        {
+          "name": "connector",
+          "type": "String",
+          "info": "The data source: data,dropbox,s3",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "info": "File path (relative to the root of a given data source)",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
