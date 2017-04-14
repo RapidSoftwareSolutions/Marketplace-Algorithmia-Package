@@ -21,7 +21,7 @@
   "blocks": [
     {
       "name": "callAlgorithm",
-      "description": "Returns all LIVE Events",
+      "description": "You can call each algorithm from the Algorithmia marketplace",
       "args": [{
         "name": "apiKey",
         "type": "credentials",
