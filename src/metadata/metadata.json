@@ -43,7 +43,7 @@
         {
           "name": "data",
           "type": "JSON",
-          "info": "JSON objects",
+          "info": "Input for the algorithm. JSON object",
           "required": true
         }],
       "callbacks": [{

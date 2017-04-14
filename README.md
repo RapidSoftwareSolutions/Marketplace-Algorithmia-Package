@@ -12,15 +12,15 @@ Connect to the Algorithmia API to host language-agnostic functions and algorithm
 3. Use API Key as credentials apiKeys.
 
 ## Algorithmia.callAlgorithm
-You can call each algorithm from the Algorithmia marketplace
-For each algorithm on the [marketplace](https://algorithmia.com/algorithms), you’ll find an owner (the user who created the algorithm), an algorithm name
+You can call each algorithm from the Algorithmia marketplace.
+On the [marketplace](https://algorithmia.com/algorithms), you’ll find an owner (the user who created the algorithm), an algorithm name
 
 | Field   | Type       | Description
 |---------|------------|----------
 | apiKey  | credentials| The api key obtained from Algorithmia
 | owner   | String     | Algorithm owner
 | algoname| String     | Algorithm name
-| data    | JSON       | JSON objects
+| data    | JSON       | Input for the algorithm. JSON object
 
 ## Algorithmia.checkExistence
 Check if directory or file exists without downloading it
