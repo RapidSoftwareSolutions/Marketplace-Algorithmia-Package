@@ -28,7 +28,7 @@ Check if directory or file exists without downloading it
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | name     | String     | File or directory
 
 ## Algorithmia.listDirectoryContents
@@ -37,7 +37,7 @@ List the contents of a directory
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | Directory (relative to the root of a given data source)
 | acl      | Boolean    | Include the directory ACL in the response. (Default = false) 
 
@@ -47,7 +47,7 @@ Create a directory through the Algorithmia Data API
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | Directory (relative to the root of a given data source)
 | name     | String     | Name of the directory to create
 
@@ -57,7 +57,7 @@ Update a directory
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | Directory (relative to the root of a given data source)
 | acl      | JSON       | JSON object specifying permissions of the directory
 ##### ACL Attribute:
@@ -73,7 +73,7 @@ Delete a directory
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | Directory (relative to the root of a given data source)
 | force    | Boolean    | If true, enables recursive delete of a non-empty directory
 
@@ -83,7 +83,7 @@ Get a file through the Algorithmia Data API
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | File path (relative to the root of a given data source)
 
 ## Algorithmia.uploadFile
@@ -92,7 +92,7 @@ Upload a file through the Algorithmia Data API
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | Directory (relative to the root of a given data source)
 | file     | File       | Uploaded file
 
@@ -102,6 +102,6 @@ Delete a file through the Algorithmia Data API
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| The api key obtained from Algorithmia
-| connector| String     | The data source: data,dropbox,s3
+| connector| Select     | The data source: data,dropbox,s3
 | path     | String     | File path (relative to the root of a given data source)
 
