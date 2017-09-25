@@ -6,8 +6,8 @@ Connect to the Algorithmia API to host language-agnostic functions and algorithm
 
 ## How to get credentials:
 
-0. Sign up in [algorithmia.com](https://algorithmia.com/).
-1. Navigate to Users->Credentials.
+0. Log in or sign up to [algorithmia.com](https://algorithmia.com/).
+1. in the upper right corner select your profile pickture->My Account->Credentials
 2. Create new simple key.
 3. Use API Key as credentials apiKeys.
 
