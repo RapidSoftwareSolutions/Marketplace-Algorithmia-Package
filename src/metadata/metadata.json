@@ -18,6 +18,12 @@
       "apiKey"
     ]
   },
+  "steps": [
+    "Log in or sign up to algorithmia.com",
+    "In the upper right corner select your profile picture->My Account->Credentials",
+    "Create new simple key",
+    "Use API Key as credentials apiKeys"
+  ],
   "blocks": [
     {
       "name": "callAlgorithm",
